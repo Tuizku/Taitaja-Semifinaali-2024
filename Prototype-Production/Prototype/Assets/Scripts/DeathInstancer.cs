@@ -9,8 +9,12 @@ public class DeathInstancer : MonoBehaviour
 
     public void Die()
     {
-        GameObject newInstance = Instantiate(instance, transform.position, transform.rotation) as GameObject;
-        Destroy(newInstance, instanceAliveTime);
+        if (instance != null)
+        {
+            GameObject newInstance = Instantiate(instance, transform.position, transform.rotation) as GameObject;
+            Destroy(newInstance, instanceAliveTime);
+        }
+        
         Destroy(gameObject);
     }
 }

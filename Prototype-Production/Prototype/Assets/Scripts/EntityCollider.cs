@@ -3,25 +3,23 @@ using UnityEngine.Events;
 
 public class EntityCollider : MonoBehaviour
 {
-    [SerializeField] private string targetTag;
     [SerializeField] private UnityEvent onDetect;
+    Vector2Int pos;
 
+    private void Start()
+    {
+        pos = GameManager.RoundToGrid(transform.position);
+    }
     private void OnEnable()
     {
-        GameManager.onTurn += Detect;
+        Player.onPlayerMove += Detect;
     }
     private void OnDisable()
     {
-        GameManager.onTurn -= Detect;
+        Player.onPlayerMove -= Detect;
     }
-    private void Detect()
+    private void Detect(Vector2Int playerMove)
     {
-        foreach (var entity in Entity.entities)
-        {
-            Vector2Int pos = GameManager.RoundToGrid(transform.position);
-            Vector2Int entityPos = GameManager.RoundToGrid(entity.position);
-            Debug.Log(pos == entityPos);
-            if (entityPos == pos && entity.entityTag == targetTag) onDetect.Invoke();
-        }
+        if (playerMove == pos) onDetect.Invoke();
     }
 }
