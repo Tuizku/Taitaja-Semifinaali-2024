@@ -78,6 +78,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   health: 10
+  entityTag: player
   position: {x: 0, y: 0, z: 0}
   damage: 15
 --- !u!114 &8308869673960214407

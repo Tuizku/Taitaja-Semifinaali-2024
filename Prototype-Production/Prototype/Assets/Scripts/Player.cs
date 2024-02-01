@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : Entity
 {
+    public static UnityAction<Vector2Int> onPlayerMove;
     public Vector2Int GetCursorTilePos()
     {
         Vector3 mPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -17,6 +19,7 @@ public class Player : Entity
 
         GameManager.DoTurn(); // Tell the enemies it's their turn
 
+        onPlayerMove.Invoke(tilePos);
         if (!MoveTo(tilePos)) return;
     }
 }

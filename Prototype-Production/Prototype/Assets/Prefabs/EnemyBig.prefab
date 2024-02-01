@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2691625303589414542
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 631573409786929250, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      propertyPath: m_Name
+      value: EnemyBig
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273668314577068977, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      propertyPath: m_Name
+      value: Sprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 3771396172460596932, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 377da477d6c534d4683475ea63348ba5, type: 2}
+    - target: {fileID: 4253877666205873928, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f561a64267a7ff4dbd98ba00ba02212, type: 3}
+    - target: {fileID: 6115188011589631044, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115188011589631044, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115188011589631044, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7379123434036215529, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7379123434036215529, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7379123434036215529, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7379123434036215529, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7379123434036215529, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7379123434036215529, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7379123434036215529, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7379123434036215529, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7379123434036215529, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7379123434036215529, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 479012390998456176, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 631573409786929250, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5429867631155658026}
+  m_SourcePrefab: {fileID: 100100000, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+--- !u!114 &1629919930652866032 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3730160788841878398, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+  m_PrefabInstance: {fileID: 2691625303589414542}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0f6cf2ef9dc8f459255ef309a659ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &3285761136989357804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 631573409786929250, guid: 69c02d11fa9563a4ab81e144faae66df, type: 3}
+  m_PrefabInstance: {fileID: 2691625303589414542}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5429867631155658026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3285761136989357804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7398c73b88f3a60459416be74a104565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5429867631155658026}
+        m_TargetAssemblyTypeName: AngleEnemy, Assembly-CSharp
+        m_MethodName: Run
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1629919930652866032}
+        m_TargetAssemblyTypeName: Flash, Assembly-CSharp
+        m_MethodName: DamageFlash
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: a029651394a5be541ac82b1632e2a192, type: 2}
+          m_ObjectArgumentAssemblyTypeName: FlashData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  health: 40
+  entityTag: enemy
+  position: {x: 0, y: 0, z: 0}
+  damage: 20

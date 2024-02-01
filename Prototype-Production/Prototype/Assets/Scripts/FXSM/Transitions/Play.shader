@@ -1,16 +1,14 @@
-Shader "Unlit/Flash"
+Shader "Hidden/Play"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-        _Flash("Flash", COLOR) = (0, 0, 0, 0)
+        _Prog ("Transition Progress", Float) = 0.5
     }
     SubShader
     {
-        Tags { "RenderType"="Transparent" }
-        ZWrite Off
-        Blend SrcAlpha OneMinusSrcAlpha
-        LOD 100
+        // No culling or depth
+        Cull Off ZWrite Off ZTest Always
 
         Pass
         {
@@ -32,23 +30,24 @@ Shader "Unlit/Flash"
                 float4 vertex : SV_POSITION;
             };
 
-            sampler2D _MainTex;
-            float4 _MainTex_ST;
-            float4 _Flash;
-
             v2f vert (appdata v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                o.uv = v.uv;
                 return o;
             }
 
-            fixed4 frag(v2f i) : SV_Target
+            sampler2D _MainTex;
+            float _Prog;
+
+            fixed4 frag (v2f i) : SV_Target
             {
-                float4 flash = (0, 0, 0, 0);
-                flash.rgb = _Flash.rgb * _Flash.a;
-                fixed4 col = tex2D(_MainTex, i.uv) + flash;
+                fixed4 col = lerp(
+                    tex2D(_MainTex, i.uv),
+                    float4(0, 0, 0, 1),
+                    floor(min(distance(i.uv, float2(0.5, 0.5)) / (1.0f - _Prog), 1))
+                );
                 return col;
             }
             ENDCG

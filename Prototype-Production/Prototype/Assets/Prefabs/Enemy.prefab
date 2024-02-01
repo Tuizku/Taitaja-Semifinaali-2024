@@ -91,6 +91,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   health: 20
+  entityTag: enemy
   position: {x: 0, y: 0, z: 0}
   damage: 5
   velocity: {x: 1, y: 0}
@@ -107,7 +108,7 @@ GameObject:
   - component: {fileID: 3771396172460596932}
   - component: {fileID: 3730160788841878398}
   m_Layer: 0
-  m_Name: EnemySmall
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

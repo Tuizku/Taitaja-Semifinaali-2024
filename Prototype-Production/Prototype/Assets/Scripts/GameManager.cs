@@ -17,8 +17,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public static void DoTurn()
     {
-        if (onTurn == null) return; // Don't bug out when no one is listening
-        onTurn.Invoke();
+        if (onTurn != null) onTurn.Invoke(); // Don't bug out when no one is listening
     }
     /// <summary>
     /// Used to round entity positions, and other non interger position to grid
