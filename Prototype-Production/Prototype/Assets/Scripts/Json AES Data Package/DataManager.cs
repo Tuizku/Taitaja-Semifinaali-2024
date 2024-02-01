@@ -14,21 +14,28 @@ public class DataManager : MonoBehaviour
     
     public string InspectPath;
 
+    public static DataManager Instance;
+    public static SaveData Data;
+    public UnityEvent<string> OnCoinsUpdate;
 
-    public SaveData Data;
-    public UnityEvent<string> OnCoinsLoad;
-
-    void Awake()
+    void OnEnable()
     {
+        Instance = this;
+
         path = Application.persistentDataPath;
         sep = Path.DirectorySeparatorChar;
         InspectPath = path;
 
         Load(Data, "SaveData");
-        OnCoinsLoad.Invoke(Data.Coins.ToString());
+        OnCoinsUpdate.Invoke(Data.Coins.ToString());
     }
 
-    
+    public static void ChangeCoins(int amount)
+    {
+        Data.Coins += amount;
+        Save(Data, "SaveData");
+        Instance.OnCoinsUpdate.Invoke(Data.Coins.ToString());
+    }
     
 
 

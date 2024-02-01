@@ -6,16 +6,47 @@ public class SpawningSystem : MonoBehaviour
 {
     [SerializeField] private List<Spawn> Spawns = new();
 
-    // Start is called before the first frame update
-    void Start()
+    
+    private void Start()
     {
-        
+        SpawnAll();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SpawnAll()
     {
-        
+        List<Vector2Int> takenPoses = new();
+
+        foreach (Spawn spawn in Spawns)
+        {
+            for (int i = 0; i < spawn.SpawnAmount; i++)
+            {
+                Vector2Int pos = FindEmptyPos(spawn, takenPoses);
+                takenPoses.Add(pos);
+                SpawnSingleObject(spawn.Prefab, pos);
+            }
+        }
+    }
+
+    private void SpawnSingleObject(GameObject prefab, Vector2 prePos)
+    {
+        Vector3 worldPos = new Vector3(transform.position.x + prePos.x, transform.position.y + prePos.y);
+        Instantiate(prefab, worldPos, Quaternion.identity);
+    }
+
+    private Vector2Int FindEmptyPos(Spawn spawn, List<Vector2Int> takenPoses)
+    {
+        while (true)
+        {
+            Vector2 floatPos = new Vector2(Random.Range(spawn.MinPos.x, spawn.MaxPos.x), Random.Range(spawn.MinPos.y, spawn.MaxPos.y));
+            Vector2Int newPos = new Vector2Int(Mathf.RoundToInt(floatPos.x), Mathf.RoundToInt(floatPos.y));
+            
+            bool isEmpty = true;
+            for (int i = 0; i < takenPoses.Count; i++)
+            {
+                if (takenPoses[i] == newPos) isEmpty = false;
+            }
+            if (isEmpty) return newPos;
+        }
     }
 }
 
