@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8520097012106037233}
   - component: {fileID: 8308869673960214407}
   - component: {fileID: 2626234591764616194}
+  - component: {fileID: -5312922335507961940}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -77,6 +78,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+        m_MethodName: set_value
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -5312922335507961940}
+        m_TargetAssemblyTypeName: SceneCaller, Assembly-CSharp
+        m_MethodName: SetFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 047c8ad26bdc4fa478c0bd6fa8911d65, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Transition, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -5312922335507961940}
+        m_TargetAssemblyTypeName: SceneCaller, Assembly-CSharp
+        m_MethodName: FXLoadScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   entityTag: player
   position: {x: 0, y: 0, z: 0}
   startingHealth: 20
@@ -132,6 +169,18 @@ MonoBehaviour:
   onButtonUp:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-5312922335507961940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684015297925363124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a6d30c2b2017648b943df6ad7f529c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7600537093093569704
 GameObject:
   m_ObjectHideFlags: 0

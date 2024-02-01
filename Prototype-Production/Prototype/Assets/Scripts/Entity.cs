@@ -51,6 +51,11 @@ public class Entity : MonoBehaviour
         transform.position = Vector3.SmoothDamp(transform.position, position, ref dampVel, smoothing);
     }
 
+    public void NewSword(Sword nextSword)
+    {
+        sword = nextSword;
+    }
+
     /// <summary>
     /// Moves the entity to another tile
     /// </summary>
