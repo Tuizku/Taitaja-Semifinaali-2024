@@ -15,7 +15,7 @@ public class DataManager : MonoBehaviour
     public string InspectPath;
 
     public static DataManager Instance;
-    public static SaveData Data;
+    public static SaveData Data = new();
     public UnityEvent<string> OnCoinsUpdate;
 
     void OnEnable()
