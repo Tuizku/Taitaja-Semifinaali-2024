@@ -15,20 +15,35 @@ public class Shop : MonoBehaviour
 
     void Start()
     {
-        //DataManager.ChangeCoins(300);
+        Sword nextSword = swords[SwordLevel + 1];
+        UpdateSwordSprite.Invoke(nextSword.Sprite);
+        UpdateSwordCost.Invoke(nextSword.Cost.ToString());
     }
 
     public void BuyNextSword()
     {
-        print("coins now" + DataManager.Data.Coins);
+        print("coins now: " + DataManager.Data.Coins);
+        print("sword level: " + SwordLevel);
+        print($"{SwordLevel + 2} >= {swords.Count}");
+
+        if (SwordLevel + 2 >= swords.Count)
+        {
+            UpdateSwordCost.Invoke("Max");
+            return;
+        }
+
         Sword nextSword = swords[SwordLevel + 1];
         if (DataManager.Data.Coins >= nextSword.Cost)
         {
-            SwordLevel++;
             DataManager.ChangeCoins(-nextSword.Cost);
+            OnUpdateSword.Invoke(nextSword);
+
+            SwordLevel++;
+            nextSword = swords[SwordLevel + 1];
+            
             UpdateSwordSprite.Invoke(nextSword.Sprite);
             UpdateSwordCost.Invoke(nextSword.Cost.ToString());
-            OnUpdateSword.Invoke(nextSword);
+            
         }
     }
 }
