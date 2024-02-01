@@ -8,9 +8,10 @@ public class Entity : MonoBehaviour
     [SerializeField] private UnityEvent onDie;
     [SerializeField] private UnityEvent onDamage;
     [SerializeField] private int health;
+    public string entityTag;
 
     private const float smoothing = 0.05f;
-    public Vector3 position;
+    [HideInInspector] public Vector3 position;
     private Vector3 dampVel;
 
     public int Health
@@ -58,6 +59,7 @@ public class Entity : MonoBehaviour
         Entity target;
         if (GameManager.HasEntity(tile, out target)) // Attack
         {
+            if (entityTag == target.entityTag) return false;
             target.Health -= damage;
             return false;
         }

@@ -12,12 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 355093d6e80ea694ab40f0173e42bdea, type: 3}
   m_Name: DamageFlash
   m_EditorClassIdentifier: 
-  shaderProperty: 
-  color: {r: 0, g: 0, b: 0, a: 0}
-  duration: 0
+  shaderProperty: _Flash
+  color: {r: 1, g: 1, b: 1, a: 1}
+  duration: 0.25
   curve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
