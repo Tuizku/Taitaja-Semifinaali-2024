@@ -19,7 +19,7 @@ public class Player : Entity
 
         GameManager.DoTurn(); // Tell the enemies it's their turn
 
-        onPlayerMove.Invoke(tilePos);
+        if (onPlayerMove != null) onPlayerMove.Invoke(tilePos);
         if (!MoveTo(tilePos)) return;
     }
 }

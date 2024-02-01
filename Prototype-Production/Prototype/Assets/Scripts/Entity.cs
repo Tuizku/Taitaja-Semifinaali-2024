@@ -36,7 +36,7 @@ public class Entity : MonoBehaviour
     private void Start()
     {
         position = transform.position;
-        health = startingHealth;
+        Health = startingHealth;
     }
     private protected void OnEnable()
     {
