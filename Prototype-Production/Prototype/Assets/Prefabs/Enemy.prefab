@@ -93,7 +93,7 @@ MonoBehaviour:
   health: 20
   entityTag: enemy
   position: {x: 0, y: 0, z: 0}
-  damage: 5
+  sword: {fileID: 11400000, guid: 2a04342bc01867f42a3c0423fb89060c, type: 2}
   velocity: {x: 1, y: 0}
 --- !u!1 &1273668314577068977
 GameObject:

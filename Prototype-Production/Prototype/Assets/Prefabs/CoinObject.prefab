@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6574805086638549481}
   - component: {fileID: 7032289114019152943}
   - component: {fileID: 7984908338545500417}
+  - component: {fileID: 4392682155899341915}
   m_Layer: 0
   m_Name: CoinObject
   m_TagString: Untagged
@@ -135,6 +136,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4392682155899341915}
+        m_TargetAssemblyTypeName: Coin, Assembly-CSharp
+        m_MethodName: Add
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7984908338545500417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,3 +162,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
   instanceAliveTime: 0
+--- !u!114 &4392682155899341915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4778082262455870545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e53e30d36f3570449d69b3ab55e740c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 10

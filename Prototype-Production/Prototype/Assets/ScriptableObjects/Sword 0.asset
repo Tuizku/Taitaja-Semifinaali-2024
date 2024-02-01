@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Sword 0
   m_EditorClassIdentifier: 
   Sprite: {fileID: 21300000, guid: ceada90549706554fa5bcb3b9a6c81cb, type: 3}
-  Damage: 0
+  Damage: 5
   Cost: 20

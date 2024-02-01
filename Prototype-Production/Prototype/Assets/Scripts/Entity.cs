@@ -6,14 +6,15 @@ public class Entity : MonoBehaviour
 {
     public static List<Entity> entities = new List<Entity>();
     [SerializeField] private UnityEvent onDie;
-    [SerializeField] private UnityEvent onDamage;
-    [SerializeField] private int health;
+    [SerializeField] private UnityEvent<float> onDamage;
     public string entityTag;
 
     private const float smoothing = 0.05f;
     [HideInInspector] public Vector3 position;
     private Vector3 dampVel;
 
+    [SerializeField] private int startingHealth = 10;
+    private int health;
     public int Health
     {
         get { return health; }
@@ -22,7 +23,7 @@ public class Entity : MonoBehaviour
             if (nextHealth == health) return; // If no changes would come
 
             health = nextHealth;
-            onDamage.Invoke();
+            onDamage.Invoke((float)health / startingHealth);
 
             if (health == 0) { // Call the death event
                 onDie.Invoke();
@@ -30,11 +31,12 @@ public class Entity : MonoBehaviour
         }
     }
 
-    public int damage;
+    public Sword sword;
 
     private void Start()
     {
         position = transform.position;
+        health = startingHealth;
     }
     private protected void OnEnable()
     {
@@ -60,7 +62,7 @@ public class Entity : MonoBehaviour
         if (GameManager.HasEntity(tile, out target)) // Attack
         {
             if (entityTag == target.entityTag) return false;
-            target.Health -= damage;
+            target.Health -= sword.Damage;
             return false;
         }
 
