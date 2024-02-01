@@ -143,7 +143,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  health: 40
   entityTag: enemy
   position: {x: 0, y: 0, z: 0}
+  startingHealth: 40
   sword: {fileID: 11400000, guid: a9b8bd20147e2874d9d96d0c91be0578, type: 2}
