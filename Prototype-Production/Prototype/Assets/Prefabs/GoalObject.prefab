@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 2374652064603746110}
   - component: {fileID: 975450159610558028}
   - component: {fileID: 68553403002937483}
+  - component: {fileID: 5388225446299595797}
+  - component: {fileID: 8773345837770389489}
+  - component: {fileID: 851022797580033057}
   m_Layer: 0
   m_Name: GoalObject
   m_TagString: Untagged
@@ -101,21 +104,9 @@ MonoBehaviour:
   onDetect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 68553403002937483}
-        m_TargetAssemblyTypeName: SceneCaller, Assembly-CSharp
-        m_MethodName: SetFX
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 047c8ad26bdc4fa478c0bd6fa8911d65, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Transition, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 68553403002937483}
-        m_TargetAssemblyTypeName: SceneCaller, Assembly-CSharp
-        m_MethodName: FXLoadNextScene
+      - m_Target: {fileID: 5388225446299595797}
+        m_TargetAssemblyTypeName: GameStateManager, Assembly-CSharp
+        m_MethodName: EndMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -135,5 +126,83 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8a6d30c2b2017648b943df6ad7f529c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5388225446299595797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2688988991441870783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 623d86df866c58b498b6f3cb103ff5d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onNextMap:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8773345837770389489}
+        m_TargetAssemblyTypeName: SceneCaller, Assembly-CSharp
+        m_MethodName: SetFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 047c8ad26bdc4fa478c0bd6fa8911d65, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Transition, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8773345837770389489}
+        m_TargetAssemblyTypeName: SceneCaller, Assembly-CSharp
+        m_MethodName: FXLoadNextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onEnemiesAlive:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 851022797580033057}
+        m_TargetAssemblyTypeName: CustomMessage, Assembly-CSharp
+        m_MethodName: SendPlayerMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Thou shall kill all enemies to pass.
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8773345837770389489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2688988991441870783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a6d30c2b2017648b943df6ad7f529c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &851022797580033057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2688988991441870783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d89149340aed043bb133ed951dd98d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

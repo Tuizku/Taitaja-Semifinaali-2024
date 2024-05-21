@@ -115,6 +115,7 @@ MonoBehaviour:
         m_CallState: 2
   entityTag: player
   position: {x: 0, y: 0, z: 0}
+  killRegen: 5
   startingHealth: 20
   sword: {fileID: 11400000, guid: 2a04342bc01867f42a3c0423fb89060c, type: 2}
 --- !u!114 &8308869673960214407

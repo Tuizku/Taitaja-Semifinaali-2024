@@ -18,6 +18,7 @@ public class Shop : MonoBehaviour
         Sword nextSword = swords[SwordLevel + 1];
         UpdateSwordSprite.Invoke(nextSword.Sprite);
         UpdateSwordCost.Invoke(nextSword.Cost.ToString());
+        OnUpdateSword.Invoke(swords[SwordLevel]);
     }
 
     public void BuyNextSword()

@@ -120,7 +120,7 @@ MonoBehaviour:
   position: {x: 0, y: 0, z: 0}
   startingHealth: 15
   sword: {fileID: 11400000, guid: 2a04342bc01867f42a3c0423fb89060c, type: 2}
-  steps: 3
+  steps: 4
   possibleDirections:
   - {x: 1, y: 0}
   - {x: 0, y: 1}

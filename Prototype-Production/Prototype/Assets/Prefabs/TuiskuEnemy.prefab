@@ -140,7 +140,8 @@ MonoBehaviour:
         m_CallState: 2
   entityTag: enemy
   position: {x: 0, y: 0, z: 0}
+  killRegen: 1
   startingHealth: 20
-  sword: {fileID: 11400000, guid: 6aa7efd15adf3384f8e48957e65711d2, type: 2}
-  MoveRarity: 0.15
+  sword: {fileID: 11400000, guid: d411beaf8619cc14caf09f468d94e473, type: 2}
+  MoveRarity: 0.6
   Player: {fileID: 0}

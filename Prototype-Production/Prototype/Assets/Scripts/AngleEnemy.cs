@@ -17,10 +17,7 @@ public class AngleEnemy : Enemy
         while (!GameManager.HasGround(nextTile) || GameManager.HasTagEntity(nextTile, "enemy"))
         {
             angle += 90;
-
-            // Recalculate the move
-            move = CalculateMoveWithAngle(angle);
-            nextTile = GameManager.RoundToGrid(move) + rounded;
+            return;
         }
         MoveTo(nextTile);
     }

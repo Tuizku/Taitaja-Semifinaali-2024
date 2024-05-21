@@ -24,6 +24,7 @@ public class Entity : MonoBehaviour
     [HideInInspector] public Vector3 position;
     private Vector3 dampVel;
 
+    [SerializeField] private int killRegen = 1;
     [SerializeField] private int startingHealth = 10;
     private int health;
     public int Health
@@ -78,6 +79,10 @@ public class Entity : MonoBehaviour
         if (GameManager.HasEntity(tile, out target)) // Attack
         {
             if (entityTag == target.entityTag) return false;
+            if (target.Health - sword.Damage <= 0)
+            { // Is killing blow
+                Health += killRegen;
+            }
             target.Health -= sword.Damage;
             return false;
         }
