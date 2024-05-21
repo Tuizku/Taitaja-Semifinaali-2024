@@ -4,12 +4,14 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
     public static UnityAction onTurn; // For broadcasting next turn
-    private static Tilemap map;
+    [SerializeField] private Tilemap wallMap;
+    [SerializeField] private Tilemap groundMap;
 
     private void Awake()
     {
-        map = GetComponentInChildren<Tilemap>(); // Find the tilemap
+        Instance = this;
     }
 
     /// <summary>
@@ -26,16 +28,23 @@ public class GameManager : MonoBehaviour
     /// <returns>Integer position</returns>
     public static Vector2Int RoundToGrid(Vector2 pos)
     {
-        return (Vector2Int)map.LocalToCell(pos);
+        return (Vector2Int)Instance.wallMap.LocalToCell(pos);
     }
     /// <summary>
-    /// Return if the position has any tile
+    /// Return true if the position has any tile
     /// </summary>
-    /// <param name="tile">The position</param>
-    /// <returns>If it has a wall</returns>
-    public static bool HasWall(Vector2Int tile)
+    /// <returns>True if it has a wall</returns>
+    public static bool HasWall(Vector2Int pos)
     {
-        return map.HasTile((Vector3Int)tile);
+        return Instance.wallMap.HasTile((Vector3Int)pos);
+    }
+    /// <summary>
+    /// Return true if the position has any tile
+    /// </summary>
+    /// <returns>True if it has a wall</returns>
+    public static bool HasGround(Vector2Int pos)
+    {
+        return Instance.groundMap.HasTile((Vector3Int)pos);
     }
     /// <summary>
     /// Find out if a spot has an entity

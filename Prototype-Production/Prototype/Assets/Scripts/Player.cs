@@ -15,7 +15,7 @@ public class Player : Entity
 
         if (!IsTileNeighbour(tilePos)) return;
 
-        if (GameManager.HasWall(tilePos)) return;
+        if (!GameManager.HasGround(tilePos)) return;
 
         GameManager.DoTurn(); // Tell the enemies it's their turn
 
