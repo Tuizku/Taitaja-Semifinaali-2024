@@ -57,5 +57,4 @@ public class Spawn
     public Vector2 MinPos;
     public Vector2 MaxPos;
     public int SpawnAmount = 1;
-    public bool UseDifficultyInAmount = true;
 }

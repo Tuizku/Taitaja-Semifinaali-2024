@@ -70,4 +70,23 @@ public class GameManager : MonoBehaviour
         target = newTarget;
         return entityInSpot;
     }
+    /// <summary>
+    /// Find out if a spot has any entity of tag
+    /// </summary>
+    /// <param name="tile">The spot</param>
+    /// <returns>If the spot has any entity of tag</returns>
+    public static bool HasTagEntity(Vector2Int tile, string tag)
+    {
+        bool entityInSpot = false;
+        foreach (var entity in Entity.entities)
+        {
+            if (entity.entityTag != tag) continue;
+            Vector2Int roundedPos = RoundToGrid(entity.position);
+            if (tile != roundedPos) continue;
+
+            entityInSpot = true;
+            break;
+        }
+        return entityInSpot;
+    }
 }

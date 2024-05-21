@@ -7,7 +7,7 @@ public class RowEnemy : Enemy
     {
         Vector2Int rounded = GameManager.RoundToGrid(position);
         Vector2Int nextTile = rounded + velocity;
-        if (!GameManager.HasGround(nextTile)) {
+        if (!GameManager.HasGround(nextTile) || GameManager.HasTagEntity(nextTile, "enemy")) {
             velocity *= -1;
             nextTile = rounded + velocity;
         }

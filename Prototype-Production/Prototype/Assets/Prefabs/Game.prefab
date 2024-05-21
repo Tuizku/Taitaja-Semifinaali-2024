@@ -445,7 +445,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.737929
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -592,12 +592,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8520097012106037233, guid: 2b2a581287fa7e14a9995cbb1727dc67, type: 3}
-      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8520097012106037233, guid: 2b2a581287fa7e14a9995cbb1727dc67, type: 3}
-      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520097012106037233, guid: 2b2a581287fa7e14a9995cbb1727dc67, type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8520097012106037233, guid: 2b2a581287fa7e14a9995cbb1727dc67, type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -636,12 +640,16 @@ PrefabInstance:
       value: Die
       objectReference: {fileID: 0}
     - target: {fileID: 8520097012106037233, guid: 2b2a581287fa7e14a9995cbb1727dc67, type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneCaller, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520097012106037233, guid: 2b2a581287fa7e14a9995cbb1727dc67, type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: SceneCaller, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8520097012106037233, guid: 2b2a581287fa7e14a9995cbb1727dc67, type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: SceneCaller, Assembly-CSharp
+      value: DeathInstancer, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8520097012106037233, guid: 2b2a581287fa7e14a9995cbb1727dc67, type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -650,10 +658,14 @@ PrefabInstance:
     - target: {fileID: 8520097012106037233, guid: 2b2a581287fa7e14a9995cbb1727dc67, type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 047c8ad26bdc4fa478c0bd6fa8911d65, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520097012106037233, guid: 2b2a581287fa7e14a9995cbb1727dc67, type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Transition, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8520097012106037233, guid: 2b2a581287fa7e14a9995cbb1727dc67, type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: Transition, Assembly-CSharp
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8520097012106037233, guid: 2b2a581287fa7e14a9995cbb1727dc67, type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -892,12 +904,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4955625061741764882, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955625061741764882, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
       propertyPath: m_enableAutoSizing
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4955625061741764882, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
       propertyPath: m_HorizontalAlignment
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5616353070938497484, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
       propertyPath: m_Spacing
@@ -941,7 +957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7594579300115960504, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -112.57001
+      value: -112.569824
       objectReference: {fileID: 0}
     - target: {fileID: 7790516940715043704, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
       propertyPath: m_AnchorMax.x
@@ -960,12 +976,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7790516940715043704, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790516940715043704, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 85.6
       objectReference: {fileID: 0}
     - target: {fileID: 7790516940715043704, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 100
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790516940715043704, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -42.8
       objectReference: {fileID: 0}
     - target: {fileID: 8427353955976989626, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
       propertyPath: m_AnchorMax.x
@@ -980,8 +1004,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8455526956506891045, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455526956506891045, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455526956506891045, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8455526956506891045, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
       propertyPath: m_SizeDelta.x
@@ -993,7 +1025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8455526956506891045, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8455526956506891045, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1116,7 +1148,8 @@ PrefabInstance:
       value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5003089956079030498, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6146963918396459582, guid: 1c106efb0852e064db3b5ad6eb923ed2, type: 3}

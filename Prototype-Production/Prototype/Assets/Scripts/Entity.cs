@@ -9,6 +9,17 @@ public class Entity : MonoBehaviour
     [SerializeField] private UnityEvent<float> onDamage;
     public string entityTag;
 
+    private Vector2Int[] neighbours =
+    {
+        new Vector2Int(1, 0),
+        new Vector2Int(0, 1),
+        new Vector2Int(-1, 0),
+        new Vector2Int(0, -1),
+        new Vector2Int(1, 1),
+        new Vector2Int(-1, -1),
+        new Vector2Int(-1, 1),
+        new Vector2Int(1, -1)
+    };
     private const float smoothing = 0.05f;
     [HideInInspector] public Vector3 position;
     private Vector3 dampVel;
@@ -33,7 +44,7 @@ public class Entity : MonoBehaviour
 
     public Sword sword;
 
-    private void Start()
+    public void Start()
     {
         position = transform.position;
         Health = startingHealth;
@@ -82,10 +93,16 @@ public class Entity : MonoBehaviour
     public bool IsTileNeighbour(Vector2Int tile) {
 
         Vector2Int currentPos = GameManager.RoundToGrid(position);
-        if (currentPos + new Vector2Int(1, 0) == tile) return true;
-        if (currentPos + new Vector2Int(-1, 0) == tile) return true;
-        if (currentPos + new Vector2Int(0, 1) == tile) return true;
-        if (currentPos + new Vector2Int(0, -1) == tile) return true;
+        bool isTileNeighbour = false;
+        foreach (var n in neighbours)
+        {
+            if (currentPos + n == tile)
+            {
+                isTileNeighbour = true;
+                break;
+            }
+        }
+        if (isTileNeighbour) return true;
         return false;
     }
 }
