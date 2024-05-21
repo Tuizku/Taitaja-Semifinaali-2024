@@ -14,7 +14,7 @@ public class AngleEnemy : Enemy
         Vector2 move = CalculateMoveWithAngle(angle);
         Vector2Int nextTile = GameManager.RoundToGrid(move) + rounded;
 
-        while (GameManager.HasWall(nextTile))
+        while (!GameManager.HasGround(nextTile))
         {
             angle += 90;
 
