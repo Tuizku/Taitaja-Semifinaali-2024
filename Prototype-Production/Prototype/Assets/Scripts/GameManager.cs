@@ -6,12 +6,15 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public static UnityAction onTurn; // For broadcasting next turn
+    public static GameObject Player;
+
     [SerializeField] private Tilemap wallMap;
     [SerializeField] private Tilemap groundMap;
 
     private void Awake()
     {
         Instance = this;
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     /// <summary>
