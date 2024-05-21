@@ -7,6 +7,8 @@ public class Shop : MonoBehaviour
 {
     static int SwordLevel = 0;
 
+    public bool Disabled = false;
+
     [SerializeField] private List<Sword> swords;
 
     public UnityEvent<Sprite> UpdateSwordSprite;
@@ -15,6 +17,7 @@ public class Shop : MonoBehaviour
 
     void Start()
     {
+        if (Disabled) return;
         Sword nextSword = swords[SwordLevel + 1];
         UpdateSwordSprite.Invoke(nextSword.Sprite);
         UpdateSwordCost.Invoke(nextSword.Cost.ToString());
@@ -46,5 +49,10 @@ public class Shop : MonoBehaviour
             UpdateSwordCost.Invoke(nextSword.Cost.ToString());
             
         }
+    }
+
+    public void ResetSword()
+    {
+        SwordLevel = 0;
     }
 }
