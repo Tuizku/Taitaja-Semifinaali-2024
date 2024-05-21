@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Play
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: df97553128850eb49b4f63e40b262879, type: 3}
-  duration: 0.25
+  duration: 0.5
   curve:
     serializedVersion: 2
     m_Curve:
